@@ -59,6 +59,7 @@ $(function () {
 		}
 		}else{
 			html.setAttribute('class', 'normal');
+			document.body.style.backgroundColor = "rgba(130, 130, 130, .1)";
 		}
 		
 	});
