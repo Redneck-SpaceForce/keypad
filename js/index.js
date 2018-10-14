@@ -1,11 +1,13 @@
 codes = ["834563","123456"]
 var html = document.getElementsByTagName('html')[0];
 html.setAttribute('class', 'normal');
-
+tries = 0;
 $(function () {
 	$(".content").click(function () {
 
 		var value = $(this).find(".number").text();
+		var audio = new Audio(value+'.mp3');
+		if(tries<3){audio.play();}
 	
 		if (value !== "<") {
 			$(".numberinput").each(function () {
@@ -36,6 +38,7 @@ $(function () {
 		
 		console.log(code);
 		if(code.length > 5){
+			tries++
 			if(codes.includes(code)){
 				document.body.style.backgroundColor = "green";
 			    $.get("http://192.168.1.130/unarmLaser", function(data, status){
