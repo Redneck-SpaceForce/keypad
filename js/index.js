@@ -1,13 +1,36 @@
-codes = ["834563","123456"]
+codes = ["950643"]
 var html = document.getElementsByTagName('html')[0];
 html.setAttribute('class', 'normal');
 tries = 0;
+
+
+let socket = new WebSocket("ws://192.168.1.30:8080");
+    readySocket();
+    function readySocket() {
+      socket.onmessage = function (event) {
+		  console.log(event.data)
+        const data = JSON.parse(event.data);
+		if(data.topic == "showScreen"){
+			document.getElementById("overlay").setAttribute("style","visibility:hidden;");	
+		}
+		if(data.topic == "hideScreen"){
+			document.getElementById("overlay").setAttribute("style","visibility:visible;");	
+		}
+	}
+}
+    setInterval(() => {
+      if (socket.readyState === WebSocket.CLOSED) {
+        socket = new WebSocket("ws://192.168.1.30:8080");
+        readySocket();
+      }
+	}, 1000);
+	
 $(function () {
 	$(".content").click(function () {
 
 		var value = $(this).find(".number").text();
 		var audio = new Audio(value+'.mp3');
-		if(tries<3){audio.play();}
+		audio.play();
 	
 		if (value !== "<") {
 			$(".numberinput").each(function () {
@@ -41,7 +64,7 @@ $(function () {
 			tries++
 			if(codes.includes(code)){
 				document.body.style.backgroundColor = "green";
-			    $.get("http://192.168.1.130/unarmLaser", function(data, status){
+			    $.get("http://192.168.1.30:3000/externalTrigger/exitPuzzle", function(data, status){
 				});
 			}else{
 				html.setAttribute('class', 'denied');
@@ -68,3 +91,4 @@ $(function () {
 	});
 		document.body.style.backgroundColor = "rgba(130, 130, 130, .1)";
 });
+	

@@ -1,120 +1,110 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsive Numeric Keypad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="UTF-8">
-  <title>Responsive Numeric Keypad</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  
-      <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-  
-</head>
-
-<body>
-
-  <div class="keypadwrapper">
-  <div class="inputwrapper">
-    <span id="d1" class="numberinput"></span>
-    <span id="d2" class="numberinput"></span>
-    <span id="d3" class="numberinput"></span>
-    <span id="d4" class="numberinput"></span>
-    <span id="d5" class="numberinput"></span>
-    <span id="d6" class="numberinput"></span>
-  </div>
-  <div class="keypad">
-    <div id="lineone" class="numberline">
-      <div class="content">
-        <div>
-          <span class="number">1</span>
-          <span>___</span>
-        </div>
+  <body>
+    <div class="keypadwrapper">
+      <div class="inputwrapper">
+        <span id="d1" class="numberinput"></span>
+        <span id="d2" class="numberinput"></span>
+        <span id="d3" class="numberinput"></span>
+        <span id="d4" class="numberinput"></span>
+        <span id="d5" class="numberinput"></span>
+        <span id="d6" class="numberinput"></span>
       </div>
-      <div class="content">
-        <div>
-          <span class="number">2</span> 
-          <span>ABC</span>
+      <div class="keypad">
+        <div id="lineone" class="numberline">
+          <div class="content">
+            <div>
+              <span class="number">1</span>
+              <span>___</span>
+            </div>
+          </div>
+          <div class="content">
+            <div>
+              <span class="number">2</span>
+              <span>ABC</span>
+            </div>
+          </div>
+          <div class="content">
+            <div>
+              <span class="number">3</span>
+              <span>DEF</span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="content">
-        <div>
-          <span class="number">3</span>
-          <span>DEF</span>
+        <div id="linetwo" class="numberline">
+          <div class="content">
+            <div>
+              <span class="number">4</span>
+              <span>GHI</span>
+            </div>
+          </div>
+          <div class="content">
+            <div>
+              <span class="number">5</span>
+              <span>JKL</span>
+            </div>
+          </div>
+          <div class="content">
+            <div>
+              <span class="number">6</span>
+              <span>MNO</span>
+            </div>
+          </div>
+        </div>
+        <div id="linethree" class="numberline">
+          <div class="content">
+            <div>
+              <span class="number">7</span>
+              <span>PQRS</span>
+            </div>
+          </div>
+          <div class="content">
+            <div>
+              <span class="number">8</span>
+              <span>TUV</span>
+            </div>
+          </div>
+          <div class="content">
+            <div>
+              <span class="number">9</span>
+              <span>WXYZ</span>
+            </div>
+          </div>
+        </div>
+        <div id="linefour" class="numberline">
+          <div class="content">
+            <div>
+              <span class="number"><</span>
+              <span>___</span>
+            </div>
+          </div>
+          <div class="content">
+            <div>
+              <span class="number">0</span>
+              <span>___</span>
+            </div>
+          </div>
+          <div class="content">
+            <div>
+              <span class="number">*</span>
+              <span>___</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div id="linetwo" class="numberline">
-      <div class="content">
-        <div>
-          <span class="number">4</span>
-          <span>GHI</span>
-        </div>
-      </div>
-      <div class="content">
-        <div>
-          <span class="number">5</span>
-          <span>JKL</span>
-        </div>
-      </div>
-      <div class="content">
-        <div>
-          <span class="number">6</span>
-          <span>MNO</span>
-        </div>
-      </div>
-    </div>
-    <div id="linethree" class="numberline">
-      <div class="content">
-        <div>
-          <span class="number">7</span>
-          <span>PQRS</span>
-        </div>
-      </div>
-      <div class="content">
-        <div>
-          <span class="number">8</span>
-          <span>TUV</span>
-        </div>
-      </div>
-      <div class="content">
-        <div>
-          <span class="number">9</span>
-          <span>WXYZ</span>
-        </div>
-      </div>
-    </div>
-    <div id="linefour" class="numberline">
-      <div class="content">
-        <div>
-          <span class="number"><</span>
-          <span>___</span>
-        </div>
-      </div>
-      <div class="content">
-        <div>
-          <span class="number">0</span>
-          <span>___</span>
-        </div>
-      </div>
-      <div class="content">
-        <div>
-          <span class="number">*</span>
-          <span>___</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-  <script src='js/jquery.min.js'></script>
+    <script src="js/jquery.min.js"></script>
 
-  
+    <script src="js/index.js"></script>
 
-    <script  src="js/index.js"></script>
-
-
-
-
-</body>
-
+    <div id="overlay"></div>
+  </body>
 </html>
